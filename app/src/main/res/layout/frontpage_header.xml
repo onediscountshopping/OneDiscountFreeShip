@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="450dp"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_front_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/ll_icons"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/gl_front_header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:columnCount="4"
+        android:rowCount="2">
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_m_nvzhuang"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女装"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_m_jujia"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="居家"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_m_xiebao"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="鞋包"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_m_shuma"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数码家电"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_m_baoyou"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9.9包邮"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_m_fengding"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20元封顶"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_m_today"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日更新"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_m_all"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"/>
+        </LinearLayout>
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/gl_front2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <ImageView
+            android:layout_columnWeight="2"
+            android:layout_rowSpan="2"
+            android:layout_rowWeight="2"/>
+
+        <ImageView
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="1"/>
+
+        <ImageView
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="1"/>
+    </GridLayout>
+</LinearLayout>
