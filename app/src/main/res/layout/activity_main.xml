@@ -42,11 +42,12 @@
             android:layout_weight="1"
             android:layout_height="wrap_content">
         <ImageView
-            android:src="@mipmap/guide_home_nm"
+            android:src="@drawable/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
             <TextView
                 android:text="首页"
+                android:textColor="#df2624"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -57,7 +58,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content">
         <ImageView
-            android:src="@mipmap/guide_sale_nm"
+            android:src="@drawable/sale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
             <TextView
@@ -72,7 +73,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content">
         <ImageView
-            android:src="@mipmap/guide_cart_nm"
+            android:src="@drawable/cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
             <TextView
@@ -87,7 +88,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content">
         <ImageView
-            android:src="@mipmap/guide_search_nm"
+            android:src="@drawable/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
             <TextView
@@ -102,7 +103,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content">
         <ImageView
-            android:src="@mipmap/guide_account_nm"
+            android:src="@drawable/account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
             <TextView

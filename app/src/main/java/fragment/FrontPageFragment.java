@@ -1,6 +1,7 @@
 package fragment;
 
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -40,7 +41,7 @@ import bean.Goods;
  */
 public class FrontPageFragment extends Fragment {
 
-
+    private static FrontPageFragment fragment;
     private ListView lv;
     private View headView;
     private ViewPager vpHeader;
@@ -50,10 +51,15 @@ public class FrontPageFragment extends Fragment {
     private FrontBaseAdapter adapter;
     private int page=1;
 
-    public FrontPageFragment() {
-        // Required empty public constructor
+    @SuppressLint("ValidFragment")
+    private FrontPageFragment() {
     }
-
+    public static FrontPageFragment getFragment(){
+        if (fragment == null) {
+            fragment = new FrontPageFragment();
+        }
+        return fragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
