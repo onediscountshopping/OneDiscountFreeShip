@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import fragment.FrontPageFragment;
+import fragment.Wortharound_fragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout llGuide;
     private RelativeLayout rlMain;
     //主页面的五个板块，可添加fragment
-    private Fragment []fragments={FrontPageFragment.getFragment()};
+    private Fragment[] fragments = {FrontPageFragment.getFragment(), new Wortharound_fragment(), new Wortharound_fragment()};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,18 +41,18 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     int tag = (int) v.getTag();
-                    if(tag==0){
+                    if (tag == 0) {
                         rlMain.setVisibility(View.VISIBLE);
-                    }else
+                    } else
                         rlMain.setVisibility(View.GONE);
                     for (int j = 0; j < llGuide.getChildCount(); j++) {
                         LinearLayout ll = (LinearLayout) llGuide.getChildAt(j);
                         ll.getChildAt(0).setSelected(false);
                         ((TextView) ll.getChildAt(1)).setTextColor(0x5d646f);
                     }
-                    ((LinearLayout)v).getChildAt(0).setSelected(true);
-                    ((TextView) ((LinearLayout)v).getChildAt(1)).setTextColor(0xdf2624);
-                    transaction.replace(R.id.ll_fragment,fragments[tag]).commit();
+                    ((LinearLayout) v).getChildAt(0).setSelected(true);
+                    ((TextView) ((LinearLayout) v).getChildAt(1)).setTextColor(0xdf2624);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.ll_fragment, fragments[tag]).commit();
                 }
             });
         }
