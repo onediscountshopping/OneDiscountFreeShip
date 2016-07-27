@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/top_bg" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@mipmap/ce_label1" />
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="#cccccc"
+            android:text="寻找商品"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+    <GridView
+        android:id="@+id/mGridView"
+        android:numColumns="3"
+        android:fadeScrollbars="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </GridView>
+
+</LinearLayout>

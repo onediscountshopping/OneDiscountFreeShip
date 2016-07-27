@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import fragment.CategorySearch_fragment;
 import fragment.FrontPageFragment;
 import fragment.Wortharound_fragment;
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout llGuide;
     private RelativeLayout rlMain;
     //主页面的五个板块，可添加fragment
-    private Fragment[] fragments = {FrontPageFragment.getFragment(), new Wortharound_fragment(), new Wortharound_fragment()};
+    private Fragment[] fragments = {FrontPageFragment.getFragment(), new Wortharound_fragment(), new Wortharound_fragment(),new CategorySearch_fragment()};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
                         rlMain.setVisibility(View.VISIBLE);
                     } else
                         rlMain.setVisibility(View.GONE);
-                    for (int j = 0; j < llGuide.getChildCount(); j++) {
-                        LinearLayout ll = (LinearLayout) llGuide.getChildAt(j);
-                        ll.getChildAt(0).setSelected(false);
-                        ((TextView) ll.getChildAt(1)).setTextColor(0x5d646f);
-                    }
-                    ((LinearLayout) v).getChildAt(0).setSelected(true);
-                    ((TextView) ((LinearLayout) v).getChildAt(1)).setTextColor(0xdf2624);
-                    getSupportFragmentManager().beginTransaction().replace(R.id.ll_fragment, fragments[tag]).commit();
+                        for (int j = 0; j < llGuide.getChildCount(); j++) {
+                            LinearLayout ll = (LinearLayout) llGuide.getChildAt(j);
+                            ll.getChildAt(0).setSelected(false);
+                          //  ((TextView) ll.getChildAt(1)).setTextColor(0x5d646f);
+                        }
+                        ((LinearLayout) v).getChildAt(0).setSelected(true);
+                        //((TextView) ((LinearLayout) v).getChildAt(1)).setTextColor(0xdf2624);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.ll_fragment, fragments[tag]).commit();
                 }
             });
         }
