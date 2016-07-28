@@ -201,24 +201,50 @@
 
     </GridLayout>
 
-    <GridLayout
-        android:id="@+id/gl_front2"
+    <!--<GridLayout-->
+        <!--android:id="@+id/gl_front2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:columnCount="2"-->
+        <!--android:rowCount="2">-->
+
+        <!--<ImageView-->
+            <!--android:layout_columnWeight="2"-->
+            <!--android:layout_rowSpan="2"-->
+            <!--android:layout_rowWeight="2"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_columnWeight="3"-->
+            <!--android:layout_rowWeight="1"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_columnWeight="3"-->
+            <!--android:layout_rowWeight="1"/>-->
+    <!--</GridLayout>-->
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:columnCount="2"
-        android:rowCount="2">
-
-        <ImageView
-            android:layout_columnWeight="2"
-            android:layout_rowSpan="2"
-            android:layout_rowWeight="2"/>
-
-        <ImageView
-            android:layout_columnWeight="3"
-            android:layout_rowWeight="1"/>
-
-        <ImageView
-            android:layout_columnWeight="3"
-            android:layout_rowWeight="1"/>
-    </GridLayout>
+        android:layout_height="150dp">
+      <ImageView
+          android:id="@+id/iv_header_fengqiang"
+          android:layout_width="0dp"
+          android:layout_weight="2"
+          android:layout_height="match_parent"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_header_meishi"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/iv_header_zhoubian"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

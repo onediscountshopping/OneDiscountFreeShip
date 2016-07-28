@@ -2,14 +2,18 @@ package fragment;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -20,6 +24,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.example.administrator.onediscountfreeship.GoodsDetailActivity;
+import com.example.administrator.onediscountfreeship.HeaderDetailActivity;
 import com.example.administrator.onediscountfreeship.ODApp;
 import com.example.administrator.onediscountfreeship.R;
 
@@ -47,9 +53,22 @@ public class FrontPageFragment extends Fragment {
     private ViewPager vpHeader;
     private LinearLayout llIcons;
     private GridLayout GlHeader;
-    private GridLayout Gl2;
+//    private GridLayout Gl2;
     private FrontBaseAdapter adapter;
-    private int page=1;
+    private int page=1,index;
+    private Handler handler=new Handler(){
+        int anInt = 0;
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if(msg.what==1){
+                vpHeader.setCurrentItem(anInt%4,true);
+                anInt++;
+                handler.sendEmptyMessageDelayed(1,2000);
+            }
+        }
+    };
+
 
     @SuppressLint("ValidFragment")
     private FrontPageFragment() {
@@ -73,7 +92,67 @@ public class FrontPageFragment extends Fragment {
         adapter = new FrontBaseAdapter(getContext(), null);
         lv.setAdapter(adapter);
         loadData(page);
+        initListener();//设置监听
         return view;
+    }
+
+    private void initListener() {//设置监听
+        vpHeader.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                for (int i = 0; i < llIcons.getChildCount(); i++) {
+                    llIcons.getChildAt(i).setSelected(false);
+                }
+                llIcons.getChildAt(position).setSelected(true);
+            }
+
+            @Override
+            public void onPageSelected(int position) { }
+
+            @Override
+            public void onPageScrollStateChanged(int state) { }
+        });
+
+        for (int i = 0; i < GlHeader.getChildCount(); i++) {
+            LinearLayout layout = (LinearLayout) GlHeader.getChildAt(i);
+            layout.setTag(i);
+            layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    switch (((int) v.getTag())){
+                        case 0:
+                            break;
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 6:
+                            break;
+                        case 7:
+                            break;
+                    }
+                    startActivity(intent);
+                }
+            });
+        }
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Goods goods = (Goods) parent.getItemAtPosition(position);
+                Intent intent = new Intent(getActivity(), GoodsDetailActivity.class);
+                intent.putExtra("url",goods.getProductUrl());
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void loadData(final int index) {//ListView加载数据
@@ -116,7 +195,7 @@ public class FrontPageFragment extends Fragment {
         vpHeader = ((ViewPager) headView.findViewById(R.id.vp_front_header));
         llIcons = (LinearLayout) headView.findViewById(R.id.ll_icons);
         GlHeader = ((GridLayout) headView.findViewById(R.id.gl_front_header));
-        Gl2 = ((GridLayout) headView.findViewById(R.id.gl_front2));
+//        Gl2 = ((GridLayout) headView.findViewById(R.id.gl_front2));
         //首页的四张图viewpager
         final List<View> imgs = new ArrayList<>();
         StringRequest sRequest = new StringRequest(Request.Method.POST, "http://www.1zhebaoyou.com/apptools/indexad" +
@@ -126,19 +205,32 @@ public class FrontPageFragment extends Fragment {
                 try {
                     JSONArray ja = new JSONObject(response).getJSONArray("adList");
                     for (int i = 0; i < ja.length(); i++) {
+                        index=i;
                         JSONObject jo = ja.getJSONObject(i);
+                        final String cName = jo.getString("cName");
                         String imgUrl = jo.getString("imgUrl");
                         ImageRequest request = new ImageRequest(imgUrl, new Response.Listener<Bitmap>() {
                             @Override
-                            public void onResponse(Bitmap response) {
+                            public void onResponse(final Bitmap response) {
                                 ImageView iv=new ImageView(getContext());
                                 iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                 iv.setImageBitmap(response);
+                                iv.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Intent intent = new Intent(getActivity(), HeaderDetailActivity.class);
+                                        intent.putExtra("index",index);
+                                        intent.putExtra("cName",cName);
+                                        intent.putExtra("img",response);
+                                        startActivity(intent);
+                                    }
+                                });
                                 imgs.add(iv);
                                 Log.i("==img", "onResponse: "+imgs.size());
                                 if(imgs.size()==4){
                                     ODPagerAdapter iAdapter =new ODPagerAdapter(imgs,null);
                                     vpHeader.setAdapter(iAdapter);
+                                    handler.sendEmptyMessage(1);
                                 }
                             }
                         }, 0, 0, Bitmap.Config.RGB_565, null);
@@ -161,6 +253,10 @@ public class FrontPageFragment extends Fragment {
         sRequest.setTag("cancel");
         ODApp.queue.add(sRequest);
 
+        ImageView iv1 = (ImageView) headView.findViewById(R.id.iv_header_fengqiang);
+        ImageView iv2 = (ImageView) headView.findViewById(R.id.iv_header_meishi);
+        ImageView iv3 = (ImageView) headView.findViewById(R.id.iv_header_zhoubian);
+        final ImageView []imageViews={iv1,iv2,iv3};
         //最后疯抢等
         StringRequest sRequest2=new StringRequest("http://www.1zhebaoyou.com/apptools/app.aspx", new Response.Listener<String>() {
             @Override
@@ -168,12 +264,13 @@ public class FrontPageFragment extends Fragment {
                 try {
                     JSONArray ja = new JSONArray(response);
                     for (int i = 0; i < ja.length(); i++) {
-                        final ImageView iv = (ImageView) Gl2.getChildAt(i);
+//                        final ImageView iv = (ImageView) Gl2.getChildAt(i);
+                        final ImageView iv = imageViews[i];
                         String imgUrl = ja.getJSONObject(i).getString("imgUrl");
                         ImageRequest request =new ImageRequest(imgUrl, new Response.Listener<Bitmap>() {
                             @Override
                             public void onResponse(Bitmap response) {
-                                iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                                iv.setScaleType(ImageView.ScaleType.FIT_XY);
                                 iv.setImageBitmap(response);
                             }
                         },0,0, Bitmap.Config.RGB_565,null );

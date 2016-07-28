@@ -1,5 +1,6 @@
 package com.example.administrator.onediscountfreeship;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -42,18 +43,18 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     int tag = (int) v.getTag();
-                    if (tag == 0) {
+                    if(tag==0){
                         rlMain.setVisibility(View.VISIBLE);
-                    } else
+                    }else
                         rlMain.setVisibility(View.GONE);
-                        for (int j = 0; j < llGuide.getChildCount(); j++) {
-                            LinearLayout ll = (LinearLayout) llGuide.getChildAt(j);
-                            ll.getChildAt(0).setSelected(false);
-                          //  ((TextView) ll.getChildAt(1)).setTextColor(0x5d646f);
-                        }
-                        ((LinearLayout) v).getChildAt(0).setSelected(true);
-                        //((TextView) ((LinearLayout) v).getChildAt(1)).setTextColor(0xdf2624);
-                        getSupportFragmentManager().beginTransaction().replace(R.id.ll_fragment, fragments[tag]).commit();
+                    for (int j = 0; j < llGuide.getChildCount(); j++) {
+                        LinearLayout ll = (LinearLayout) llGuide.getChildAt(j);
+                        ll.getChildAt(0).setSelected(false);
+                        ((TextView) ll.getChildAt(1)).setTextColor(Color.rgb(93,100,111));
+                    }
+                    ((LinearLayout)v).getChildAt(0).setSelected(true);
+                    ((TextView) ((LinearLayout)v).getChildAt(1)).setTextColor(0xffdf2624);//颜色要用8位
+                    getSupportFragmentManager().beginTransaction().replace(R.id.ll_fragment,fragments[tag]).commit();
                 }
             });
         }
