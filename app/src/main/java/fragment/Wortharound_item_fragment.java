@@ -37,8 +37,6 @@ public class Wortharound_item_fragment extends Fragment {
     private static final String TAG = "Wortharound_item_fragment";
     private int bc;
 
-    //private Wortharound_bean.RowsBean rowsBean;
-   // private List<Wortharound_bean.RowsBean> data;
     private Wortharound_listviewAdapter listAdapter;
     private ListView mlistView;
 

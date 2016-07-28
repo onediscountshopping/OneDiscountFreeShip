@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:onClick="onPop_layout"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:id="@+id/PopWindow_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/quanbu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/quanbu"
+                    android:src="@mipmap/ic_category_all" />
+
+                <TextView
+                    android:id="@+id/quanbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/quanbu_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/quanbu"
+                    android:text="全部"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/baoyou_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/baoyou"
+                    android:src="@mipmap/ic_category_99" />
+
+                <TextView
+                    android:id="@+id/baoyou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/baoyou_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/baoyou"
+                    android:text="9.9包邮"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fengzhuang_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/fengding"
+                    android:src="@mipmap/ic_category_20" />
+
+                <TextView
+                    android:id="@+id/fengding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/fengzhuang_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/fengding"
+                    android:text="20元封顶"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="nvzhuang">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/nvzhuan"
+                    android:src="@mipmap/ic_category_nvzhuang" />
+
+                <TextView
+                    android:id="@+id/nvzhuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/nvzhuang_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/nvzhuan"
+                    android:text="女装"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/nvzhuang_jiantou"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/nvzhuang_text"
+                    android:src="@mipmap/ic_triangle_down_category" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nvhzunag_item001"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/q1"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/top_bg" />
+
+                <TextView
+                    android:id="@+id/quanbunvzhuang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/q1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:onClick="PopWindow"
+                    android:text="全部女装" />
+
+                <ImageView
+                    android:id="@+id/q2"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/quanbunvzhuang"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/nav_top2x" />
+
+                <TextView
+                    android:id="@+id/shangyi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/q2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:onClick="PopWindow"
+                    android:text="上衣" />
+
+                <ImageView
+                    android:id="@+id/q3"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/shangyi2"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/nav_top2x" />
+
+                <TextView
+                    android:id="@+id/qunku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/q3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:onClick="PopWindow"
+                    android:text="裙裤" />
+
+                <ImageView
+                    android:id="@+id/q4"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/qunku"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/nav_top2x" />
+
+                <TextView
+                    android:id="@+id/neiyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/q4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:onClick="PopWindow"
+                    android:text="内衣" />
+
+                <ImageView
+                    android:id="@+id/q5"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/neiyi"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/nav_top2x" />
+
+                <TextView
+                    android:id="@+id/taozhuang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/q5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:onClick="PopWindow"
+                    android:text="套装" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/taozhuang"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/nav_top2x" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nanzhuang_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/nanzhuang"
+                    android:src="@mipmap/ic_category_nanzhuang" />
+
+                <TextView
+                    android:id="@+id/nanzhuang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/nanzhuang_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/nanzhuang"
+                    android:text="男装"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/jujia_lauout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/jujia"
+                    android:src="@mipmap/ic_category_jujia" />
+
+                <TextView
+                    android:id="@+id/jujia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/jujia_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/jujia"
+                    android:text="居家"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/muying_lauyout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/muying"
+                    android:src="@mipmap/ic_category_muying" />
+
+                <TextView
+                    android:id="@+id/muying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/muying_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/muying"
+                    android:text="母婴"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/xiabao_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/xiebao"
+                    android:src="@mipmap/ic_category_xiebao" />
+
+                <TextView
+                    android:id="@+id/xiebao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/xiabao_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/xiebao"
+                    android:text="鞋包"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/paishi_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/peishi"
+                    android:src="@mipmap/ic_category_peishi" />
+
+                <TextView
+                    android:id="@+id/peishi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/paishi_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/peishi"
+                    android:text="配饰"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/meishi_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/meishi"
+                    android:src="@mipmap/ic_category_meishi" />
+
+                <TextView
+                    android:id="@+id/meishi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/meishi_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/meishi"
+                    android:text="美食"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shuma_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/shumajiadian"
+                    android:src="@mipmap/ic_category_shuma" />
+
+                <TextView
+                    android:id="@+id/shumajiadian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/shuma_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/shumajiadian"
+                    android:text="数码家电"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/meizhuang_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/meizhuang"
+                    android:src="@mipmap/ic_category_huazhuangpin" />
+
+                <TextView
+                    android:id="@+id/meizhuang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/meizhuang_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/meizhuang"
+                    android:text="美妆个护"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wenti_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/wenti"
+                    android:src="@mipmap/ic_category_wenti" />
+
+                <TextView
+                    android:id="@+id/wenti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/wenti_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/wenti"
+                    android:text="文体"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/oldman_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:onClick="PopWindow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/oldman"
+                    android:src="@mipmap/ic_category_oldman" />
+
+                <TextView
+                    android:id="@+id/oldman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="     " />
+
+                <TextView
+                    android:id="@+id/oldman_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/oldman"
+                    android:text="老年人"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

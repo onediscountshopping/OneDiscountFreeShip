@@ -7,6 +7,7 @@
     tools:context="com.example.administrator.onediscountfreeship.CategorySearch_Activity">
 
     <FrameLayout
+        android:id="@+id/topred"
         android:layout_width="match_parent"
         android:layout_height="40dp">
 
@@ -17,6 +18,9 @@
             android:src="@mipmap/top_bg" />
 
         <LinearLayout
+            android:id="@+id/popwin"
+            android:onClick="onPop"
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -33,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:src="@mipmap/ic_category_title_down" />
         </LinearLayout>
 
@@ -64,7 +68,7 @@
 
             <FrameLayout
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_weight="1">
 
@@ -76,6 +80,9 @@
                     android:src="@mipmap/bg_sort_tab_left_btn_normal9" />
 
                 <TextView
+                    android:id="@+id/moren"
+                    android:onClick="onSearch"
+                    android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -84,7 +91,7 @@
 
             <FrameLayout
                 android:layout_marginLeft="2dp"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
@@ -95,6 +102,9 @@
                     android:src="@mipmap/bg_sort_tab_left_btn_normal9" />
 
                 <TextView
+                    android:id="@+id/xiaoliang"
+                    android:onClick="onSearch"
+                    android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -102,18 +112,22 @@
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <ImageView
+                    android:id="@+id/image_jiage"
                     android:layout_marginLeft="1dp"
                     android:layout_marginRight="1dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:src="@mipmap/bg_sort_tab_center_btn_normal_unselected" />
 
                 <TextView
+                    android:id="@+id/jiage"
+                    android:onClick="onSearch"
+                    android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -121,7 +135,7 @@
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
@@ -131,6 +145,9 @@
                     android:layout_marginRight="5dp"
                     android:src="@mipmap/bg_sort_tab_left_btn_normal9" />
                 <TextView
+                    android:id="@+id/zuixin"
+                    android:onClick="onSearch"
+                    android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
