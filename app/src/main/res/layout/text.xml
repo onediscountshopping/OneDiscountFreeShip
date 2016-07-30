@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="商品类型"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/DrawerLayout_quanbu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="全部"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/DrawerLayout_tianmao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="只看天猫"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/DrawerLayout_taobao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="只看淘宝"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/nav_top2x" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="价格区间"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:hint="最低价"
+            android:textSize="10dp"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/DrawerLayout_floorprice"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/opop" />
+
+        <TextView
+            android:id="@+id/opop"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:text="元 ~  " />
+
+        <EditText
+            android:hint="最高价"
+            android:textSize="10dp"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/DrawerLayout_highestprice"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/opop" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/DrawerLayout_highestprice"
+            android:text="元" />
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/top_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="完成"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+</LinearLayout>

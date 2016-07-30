@@ -102,7 +102,7 @@
                     android:text="     " />
 
                 <TextView
-                    android:id="@+id/fengzhuang_name"
+                    android:id="@+id/fengding_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -115,7 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:clickable="true"
-                android:onClick="nvzhuang">
+                android:onClick="nvzhuang_sss">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -164,7 +164,7 @@
                     android:src="@mipmap/top_bg" />
 
                 <TextView
-                    android:id="@+id/quanbunvzhuang"
+                    android:id="@+id/quanbunvzhuang_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/q1"
@@ -179,13 +179,13 @@
                     android:id="@+id/q2"
                     android:layout_width="100dp"
                     android:layout_height="2dp"
-                    android:layout_below="@+id/quanbunvzhuang"
+                    android:layout_below="@+id/quanbunvzhuang_name"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitXY"
                     android:src="@mipmap/nav_top2x" />
 
                 <TextView
-                    android:id="@+id/shangyi2"
+                    android:id="@+id/shangyi2_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/q2"
@@ -200,13 +200,13 @@
                     android:id="@+id/q3"
                     android:layout_width="100dp"
                     android:layout_height="2dp"
-                    android:layout_below="@+id/shangyi2"
+                    android:layout_below="@+id/shangyi2_name"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitXY"
                     android:src="@mipmap/nav_top2x" />
 
                 <TextView
-                    android:id="@+id/qunku"
+                    android:id="@+id/qunku_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/q3"
@@ -221,13 +221,13 @@
                     android:id="@+id/q4"
                     android:layout_width="100dp"
                     android:layout_height="2dp"
-                    android:layout_below="@+id/qunku"
+                    android:layout_below="@+id/qunku_name"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitXY"
                     android:src="@mipmap/nav_top2x" />
 
                 <TextView
-                    android:id="@+id/neiyi"
+                    android:id="@+id/neiyi_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/q4"
@@ -242,13 +242,13 @@
                     android:id="@+id/q5"
                     android:layout_width="100dp"
                     android:layout_height="2dp"
-                    android:layout_below="@+id/neiyi"
+                    android:layout_below="@+id/neiyi_name"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitXY"
                     android:src="@mipmap/nav_top2x" />
 
                 <TextView
-                    android:id="@+id/taozhuang"
+                    android:id="@+id/taozhuang_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/q5"
@@ -262,7 +262,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="2dp"
-                    android:layout_below="@+id/taozhuang"
+                    android:layout_below="@+id/taozhuang_name"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitXY"
                     android:src="@mipmap/nav_top2x" />

@@ -19,11 +19,11 @@
 
         <LinearLayout
             android:id="@+id/popwin"
-            android:onClick="onPop"
-            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="onPopOnClick"
             android:orientation="horizontal">
 
             <TextView
@@ -47,119 +47,259 @@
             android:layout_gravity="end"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:onClick="Onshaixuan"
             android:text="筛选"
             android:textColor="#ffffff" />
     </FrameLayout>
 
-    <FrameLayout
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:layout_height="30dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/bg_sort_tab_left_btn_pressed9" />
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <FrameLayout
-                android:layout_gravity="center_vertical"
-                android:layout_width="0dp"
-                android:layout_height="30dp"
-                android:layout_weight="1">
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
 
                 <ImageView
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
-                    android:src="@mipmap/bg_sort_tab_left_btn_normal9" />
-
-                <TextView
-                    android:id="@+id/moren"
-                    android:onClick="onSearch"
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="默认" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_marginLeft="2dp"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_marginRight="1dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/bg_sort_tab_left_btn_normal9" />
-
-                <TextView
-                    android:id="@+id/xiaoliang"
-                    android:onClick="onSearch"
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="销量" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:id="@+id/image_jiage"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@mipmap/bg_sort_tab_center_btn_normal_unselected" />
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_sort_tab_left_btn_pressed9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:src="@mipmap/bg_sort_tab_left_btn_normal9" />
+
+                        <TextView
+                            android:id="@+id/moren"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:onClick="onSearch"
+                            android:text="默认" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1dp"
+                            android:src="@mipmap/bg_sort_tab_left_btn_normal9" />
+
+                        <TextView
+                            android:id="@+id/xiaoliang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:onClick="onSearch"
+                            android:text="销量" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/image_jiage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:src="@mipmap/bg_sort_tab_center_btn_normal_unselected" />
+
+                        <TextView
+                            android:id="@+id/jiage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:onClick="onSearch"
+                            android:text="价格" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:src="@mipmap/bg_sort_tab_left_btn_normal9" />
+
+                        <TextView
+                            android:id="@+id/zuixin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:onClick="onSearch"
+                            android:text="最新" />
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <ListView
+                android:id="@+id/CategorySearch_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/draweLayout_LinearLayout"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="商品类型"
+                android:textSize="15dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/DrawerLayout_quanbu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="全部"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/DrawerLayout_tianmao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="只看天猫"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/DrawerLayout_taobao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="只看淘宝"
+                    android:textSize="15dp" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/nav_top2x" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="价格区间"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/DrawerLayout_floorprice"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:hint="最低价"
+                    android:padding="10dp"
+                    android:textSize="10dp" />
 
                 <TextView
-                    android:id="@+id/jiage"
-                    android:onClick="onSearch"
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="价格" />
-            </FrameLayout>
+                    android:id="@+id/opop"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/DrawerLayout_floorprice"
+                    android:padding="10dp"
+                    android:text="元 ~  " />
+
+                <EditText
+                    android:id="@+id/DrawerLayout_highestprice"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/opop"
+                    android:hint="最高价"
+                    android:padding="10dp"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/DrawerLayout_highestprice"
+                    android:padding="10dp"
+                    android:text="元" />
+
+            </RelativeLayout>
 
             <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/DrawerLayout_wancheng"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:src="@mipmap/bg_sort_tab_left_btn_normal9" />
-                <TextView
-                    android:id="@+id/zuixin"
-                    android:onClick="onSearch"
                     android:clickable="true"
+                    android:onClick="wancheng"
+                    android:src="@mipmap/top_bg" />
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="最新" />
+                    android:text="完成"
+                    android:textColor="#ffffff" />
             </FrameLayout>
-        </LinearLayout>
-    </FrameLayout>
 
-    <ListView
-        android:id="@+id/CategorySearch_listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+
 
 </LinearLayout>
