@@ -33,6 +33,7 @@ public class GoodsDetailActivity extends AppCompatActivity {
             }
         });
         webView.loadUrl(path);
+
     }
 
     public void click(View view) {

@@ -24,6 +24,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.example.administrator.onediscountfreeship.FengqiangActivity;
 import com.example.administrator.onediscountfreeship.GoodsDetailActivity;
 import com.example.administrator.onediscountfreeship.HeaderDetailActivity;
 import com.example.administrator.onediscountfreeship.ODApp;
@@ -54,6 +55,7 @@ public class FrontPageFragment extends Fragment {
     private LinearLayout llIcons;
     private GridLayout GlHeader;
 //    private GridLayout Gl2;
+    private ImageView iv1,iv2,iv3;
     private FrontBaseAdapter adapter;
     private int page=1,index;
     private Handler handler=new Handler(){
@@ -64,7 +66,7 @@ public class FrontPageFragment extends Fragment {
             if(msg.what==1){
                 vpHeader.setCurrentItem(anInt%4,true);
                 anInt++;
-                handler.sendEmptyMessageDelayed(1,2000);
+                handler.sendEmptyMessageDelayed(1,3000);
             }
         }
     };
@@ -142,7 +144,7 @@ public class FrontPageFragment extends Fragment {
                 }
             });
         }
-
+        //ListView每一项的点击事件
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -153,6 +155,13 @@ public class FrontPageFragment extends Fragment {
             }
         });
 
+        iv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FengqiangActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void loadData(final int index) {//ListView加载数据
@@ -253,9 +262,9 @@ public class FrontPageFragment extends Fragment {
         sRequest.setTag("cancel");
         ODApp.queue.add(sRequest);
 
-        ImageView iv1 = (ImageView) headView.findViewById(R.id.iv_header_fengqiang);
-        ImageView iv2 = (ImageView) headView.findViewById(R.id.iv_header_meishi);
-        ImageView iv3 = (ImageView) headView.findViewById(R.id.iv_header_zhoubian);
+        iv1 = (ImageView) headView.findViewById(R.id.iv_header_fengqiang);
+        iv2 = (ImageView) headView.findViewById(R.id.iv_header_meishi);
+        iv3 = (ImageView) headView.findViewById(R.id.iv_header_zhoubian);
         final ImageView []imageViews={iv1,iv2,iv3};
         //最后疯抢等
         StringRequest sRequest2=new StringRequest("http://www.1zhebaoyou.com/apptools/app.aspx", new Response.Listener<String>() {

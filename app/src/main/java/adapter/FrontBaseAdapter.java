@@ -83,7 +83,7 @@ public class FrontBaseAdapter extends BaseAdapter {
         }, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                holder.iv.setImageResource(R.mipmap.noresult);
+//                holder.iv.setImageResource(R.mipmap.noresult);
             }
         });
         request.setTag("cancel");
