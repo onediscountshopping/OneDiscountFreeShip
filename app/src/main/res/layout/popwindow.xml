@@ -46,6 +46,7 @@
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/quanbu"
                     android:text="全部"
+                    android:textColor="#000000"
                     android:textSize="20dp" />
             </RelativeLayout>
 
@@ -72,6 +73,7 @@
 
                 <TextView
                     android:id="@+id/baoyou_name"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -102,6 +104,7 @@
                     android:text="     " />
 
                 <TextView
+                    android:textColor="#000000"
                     android:id="@+id/fengding_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -132,6 +135,7 @@
                     android:text="     " />
 
                 <TextView
+                    android:textColor="#000000"
                     android:id="@+id/nvzhuang_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -167,6 +171,7 @@
                     android:id="@+id/quanbunvzhuang_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#000000"
                     android:layout_below="@+id/q1"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp"
@@ -189,6 +194,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/q2"
+                    android:textColor="#000000"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
@@ -210,6 +216,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/q3"
+                    android:textColor="#000000"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
@@ -231,6 +238,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/q4"
+                    android:textColor="#000000"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
@@ -252,6 +260,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/q5"
+                    android:textColor="#000000"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
@@ -297,6 +306,7 @@
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/nanzhuang"
                     android:text="男装"
+                    android:textColor="#000000"
                     android:textSize="20dp" />
             </RelativeLayout>
 
@@ -327,6 +337,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/jujia"
+                    android:textColor="#000000"
                     android:text="居家"
                     android:textSize="20dp" />
             </RelativeLayout>
@@ -358,6 +369,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/muying"
+                    android:textColor="#000000"
                     android:text="母婴"
                     android:textSize="20dp" />
             </RelativeLayout>
@@ -389,6 +401,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/xiebao"
+                    android:textColor="#000000"
                     android:text="鞋包"
                     android:textSize="20dp" />
             </RelativeLayout>
@@ -420,6 +433,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/peishi"
+                    android:textColor="#000000"
                     android:text="配饰"
                     android:textSize="20dp" />
             </RelativeLayout>
@@ -451,6 +465,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/meishi"
+                    android:textColor="#000000"
                     android:text="美食"
                     android:textSize="20dp" />
             </RelativeLayout>
@@ -482,6 +497,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/shumajiadian"
+                    android:textColor="#000000"
                     android:text="数码家电"
                     android:textSize="20dp" />
             </RelativeLayout>
@@ -513,6 +529,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/meizhuang"
+                    android:textColor="#000000"
                     android:text="美妆个护"
                     android:textSize="20dp" />
             </RelativeLayout>
@@ -544,6 +561,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/wenti"
+                    android:textColor="#000000"
                     android:text="文体"
                     android:textSize="20dp" />
             </RelativeLayout>
@@ -575,12 +593,10 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/oldman"
+                    android:textColor="#000000"
                     android:text="老年人"
                     android:textSize="20dp" />
             </RelativeLayout>
-
         </LinearLayout>
-
     </ScrollView>
-
 </LinearLayout>

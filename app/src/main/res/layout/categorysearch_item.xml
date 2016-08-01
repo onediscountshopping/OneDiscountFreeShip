@@ -19,5 +19,6 @@
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
         android:text="女装"
+        android:textColor="#000000"
         android:textSize="10dp" />
 </RelativeLayout>

@@ -34,9 +34,9 @@ public class CategorySearch_fragment extends Fragment {
             R.mipmap.peishi, R.mipmap.jkj, R.mipmap.esfd,
             R.mipmap.newsort};
     private String[] name = {"女装", "男装", "居家",
-            "母婴", "鞋帽", "内衣", "美食", "数码家电"
+            "母婴", "鞋包", "内衣", "美食", "数码家电"
             , "美妆个护", "文体", "中老年", "配饰", "9.9包邮",
-            "20元封顶", "今日更新",};
+            "20元封顶", "今日更新"};
     private List<Map<String, Object>> data;
 
     @Nullable
@@ -46,8 +46,8 @@ public class CategorySearch_fragment extends Fragment {
         mGridView = (GridView) view.findViewById(R.id.mGridView);
 
         initData();
-        SimpleAdapter adapter = new SimpleAdapter(getActivity(), data, R.layout.categorysearch_item, new String[]{"name", "imges"}, new int[]{
-
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(), data, R.layout.categorysearch_item,
+                new String[]{"name", "imges"}, new int[]{
                 R.id.CategorySearch_item_name, R.id.CategorySearch_item_image});
         mGridView.setAdapter(adapter);
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
