@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NameActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="#e63b53"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择您的身份"
+            android:textColor="#FFFFFF"
+            android:textSize="21dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="为您私人制定更适合的商品"
+            android:textColor="#FFFFFF"
+            android:textSize="19dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/app_id_arrow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="48dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick_meinv">
+
+            <ImageView
+                android:id="@+id/imageView_gsel"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@mipmap/id_girl_sel_bg" />
+
+            <ImageView
+                android:id="@+id/imageView_gnor"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@mipmap/id_girl_nor_bg" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView_gsel">
+
+                <ImageView
+                    android:layout_width="63dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="22dp"
+                    android:src="@mipmap/id_text_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="13.5dp"
+                    android:text="美女"
+                    android:textColor="#000000" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick_lama">
+
+            <ImageView
+                android:id="@+id/imageView_wnor"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@mipmap/id_woman_nor_bg" />
+
+            <ImageView
+                android:id="@+id/imageView_wsel"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@mipmap/id_woman_sel_bg" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView_wsel">
+
+                <ImageView
+                    android:layout_width="63dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="25.5dp"
+                    android:src="@mipmap/id_text_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40.5dp"
+                    android:layout_marginTop="13.7dp"
+                    android:text="辣妈"
+                    android:textColor="#000000" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick_shuaige">
+
+        <ImageView
+            android:id="@+id/imageView_msel"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@mipmap/id_man_sel_bg" />
+
+        <ImageView
+            android:id="@+id/imageView_mnor"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@mipmap/id_man_nor_bg" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView_msel">
+
+            <ImageView
+                android:layout_width="63dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="23.6dp"
+                android:src="@mipmap/id_text_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="13.7dp"
+                android:text="帅哥"
+                android:textColor="#000000" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="205dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        android:background="#d61a3b"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick_recommend">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            android:textSize="21dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

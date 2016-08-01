@@ -7,117 +7,139 @@
 
     <RelativeLayout
         android:id="@+id/rl_main"
-        android:background="#d61a3b"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="60dp"
+        android:background="#d61a3b">
+
         <ImageView
             android:id="@+id/iv_search"
-            android:src="@mipmap/search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@mipmap/search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="一折包邮"
             android:textColor="#ffffff"
-            android:textSize="30dp"
-            android:text="一折包邮"/>
+            android:textSize="30dp" />
+
         <ImageView
             android:id="@+id/iv_signin"
-            android:src="@mipmap/signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:src="@mipmap/signin" />
     </RelativeLayout>
+
     <LinearLayout
-        android:orientation="horizontal"
         android:id="@+id/ll_guide"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
         <LinearLayout
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home" />
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="首页"
-                android:textColor="#df2624"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="#df2624" />
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/sale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-            <TextView
-                android:text="品牌特卖"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:src="@drawable/sale" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="品牌特卖" />
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-            <TextView
-                android:text="值得逛"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="值得逛" />
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-            <TextView
-                android:text="分类搜索"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:src="@drawable/search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分类搜索" />
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-            <TextView
-                android:text="个人中心"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:src="@drawable/account" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人中心" />
         </LinearLayout>
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/ll_fragment"
-        android:orientation="horizontal"
-        android:layout_below="@id/rl_main"
-        android:layout_above="@id/ll_guide"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_guide"
+        android:layout_below="@id/rl_main"
+        android:orientation="horizontal">
+
+    </LinearLayout>
 </RelativeLayout>

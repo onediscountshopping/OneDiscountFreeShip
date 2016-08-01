@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/user_bg" />
+
+        <ImageView
+            android:id="@+id/imageView_head"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginLeft="148.5dp"
+            android:layout_marginTop="14dp"
+            android:src="@mipmap/user_img" />
+
+        <TextView
+            android:id="@+id/textView_phone"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="131.5dp"
+            android:layout_marginTop="82dp"
+            android:gravity="center"
+            android:text="13673541527"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageView_login"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/bg_sort_tab" />
+
+        <TextView
+            android:id="@+id/textView_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="立即登录"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imageView_name"
+            android:layout_width="75dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="144dp"
+            android:layout_marginTop="107dp"
+            android:alpha="10"
+            android:src="@mipmap/id_text_bg" />
+
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="165.5dp"
+            android:layout_marginTop="107dp"
+            android:text="辣妈"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:layout_width="21.5dp"
+            android:layout_height="21.5dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:src="@mipmap/icon_setup" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_intent"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/usericon_order" />
+
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="去淘宝查看订单"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/btn_right_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_logistics"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/usericon_address" />
+
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="去淘宝查看物流信息"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/btn_right_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_shopping"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/usericon_shoppingcart" />
+
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="去淘宝查看我的购物车"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/btn_right_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/usericon_collects" />
+
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="去淘宝查看我的收藏夹"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/btn_right_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#FFFFFF" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_integral"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/usericon_sign" />
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="签到领积分"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/usericon_new" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="163dp"
+            android:src="@mipmap/btn_right_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_myIntegral"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/usericon_integral" />
+
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="我的积分"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/btn_right_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_integralMarket"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/usericon_mall" />
+
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="积分商城"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/btn_right_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/usericon_share" />
+
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="推荐好友送积分"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/btn_right_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#cccccc" />
+
+</LinearLayout>

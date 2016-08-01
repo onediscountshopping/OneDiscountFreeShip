@@ -57,6 +57,7 @@ public class FrontPageFragment extends Fragment {
 //    private GridLayout Gl2;
     private ImageView iv1,iv2,iv3;
     private FrontBaseAdapter adapter;
+    private int page = 1;
     private int page=1,index;
     private Handler handler=new Handler(){
         int anInt = 0;
@@ -220,7 +221,7 @@ public class FrontPageFragment extends Fragment {
                         String imgUrl = jo.getString("imgUrl");
                         ImageRequest request = new ImageRequest(imgUrl, new Response.Listener<Bitmap>() {
                             @Override
-                            public void onResponse(final Bitmap response) {
+                            public void onResponse(Bitmap response) {
                                 ImageView iv=new ImageView(getContext());
                                 iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                 iv.setImageBitmap(response);
